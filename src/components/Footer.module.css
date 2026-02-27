@@ -1,0 +1,74 @@
+.footer {
+  background: var(--dark-2);
+  border-top: 1px solid rgba(245,166,35,.1);
+  padding: 36px 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.logo {
+  font-family: var(--f-display);
+  font-size: .95rem;
+  font-weight: 900;
+  color: var(--amber);
+  letter-spacing: 2px;
+}
+.logo span { color: var(--white); }
+
+.copy {
+  font-family: var(--f-mono);
+  font-size: .7rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLink {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(245,166,35,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--f-mono);
+  font-size: .75rem;
+}
+
+.socialLink:hover {
+  background: var(--amber);
+  color: var(--dark);
+  border-color: transparent;
+}
+
+.adminLink {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(200,216,236,.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(200,216,236,.15);
+  text-decoration: none;
+  font-size: .75rem;
+  transition: color .3s, border-color .3s;
+}
+.adminLink:hover {
+  color: var(--muted);
+  border-color: rgba(200,216,236,.2);
+}
+
+@media (max-width: 900px) {
+  .footer { padding: 28px 24px; justify-content: center; text-align: center; }
+}
