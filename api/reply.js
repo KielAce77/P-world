@@ -1,5 +1,12 @@
 import tls from 'tls';
 
+// Load env locally (ignored by Vercel in production)
+try {
+    const dotenv = await import('dotenv');
+    dotenv.config();
+} catch (e) { }
+
+
 const sendMailRaw = (to, subject, text, user, pass) => {
     return new Promise((resolve, reject) => {
         const socket = tls.connect(465, 'smtp.gmail.com', () => console.log('Connected to Google via TLS'));
